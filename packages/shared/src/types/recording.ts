@@ -1,4 +1,4 @@
-import type { SimulationConfig, SimulationTick } from './simulation';
+import type { SimulationConfig, SimulationTick } from './simulation.js';
 
 export interface SimulationRecording {
   id: string;

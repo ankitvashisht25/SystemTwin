@@ -1,4 +1,4 @@
-import type { ChaosScenario } from '../types/chaos';
+import type { ChaosScenario } from '../types/chaos.js';
 
 export const chaosScenarios: ChaosScenario[] = [
   {

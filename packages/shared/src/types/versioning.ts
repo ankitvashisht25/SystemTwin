@@ -1,4 +1,4 @@
-import type { ArchitectureNode, ArchitectureEdge } from './architecture';
+import type { ArchitectureNode, ArchitectureEdge } from './architecture.js';
 
 export interface ArchitectureVersion {
   id: string;

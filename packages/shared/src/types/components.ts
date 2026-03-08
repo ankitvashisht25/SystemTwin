@@ -1,4 +1,4 @@
-import type { ComponentType, NodeCategory } from './architecture';
+import type { ComponentType, NodeCategory } from './architecture.js';
 
 export interface ComponentDefinition {
   type: ComponentType;

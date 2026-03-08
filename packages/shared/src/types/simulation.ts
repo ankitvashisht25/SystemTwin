@@ -1,4 +1,4 @@
-import type { NodeStatus } from './architecture';
+import type { NodeStatus } from './architecture.js';
 
 export type FailureType = 'crash' | 'latency' | 'partition' | 'resource-exhaustion';
 

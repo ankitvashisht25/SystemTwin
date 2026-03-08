@@ -1,4 +1,4 @@
-import type { ComponentDefinition } from '../types/components';
+import type { ComponentDefinition } from '../types/components.js';
 
 export const componentLibrary: ComponentDefinition[] = [
   // Frontend

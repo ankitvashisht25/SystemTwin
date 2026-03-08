@@ -1,4 +1,4 @@
-import type { ArchitectureTemplate } from '../types/templates';
+import type { ArchitectureTemplate } from '../types/templates.js';
 
 export const architectureTemplates: ArchitectureTemplate[] = [
   {

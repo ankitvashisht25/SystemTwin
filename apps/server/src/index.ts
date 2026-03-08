@@ -3,6 +3,8 @@ import { createServer } from 'http';
 import { Server } from 'socket.io';
 import cors from 'cors';
 import pinoHttp from 'pino-http';
+import path from 'path';
+import { fileURLToPath } from 'url';
 import { logger } from './lib/logger.js';
 import { authRouter } from './routes/auth.js';
 import { architectureRouter } from './routes/architecture.js';
@@ -68,6 +70,17 @@ app.use('/api/comments', apiLimiter, commentsRouter);
 app.use('/api/activity', apiLimiter, activityRouter);
 app.use('/api/import', apiLimiter, infraImportRouter);
 app.use('/api/compare', apiLimiter, compareRouter);
+
+// Serve frontend static files in production
+const __dirname = path.dirname(fileURLToPath(import.meta.url));
+const clientDistPath = path.resolve(__dirname, '../../web/dist');
+app.use(express.static(clientDistPath));
+app.get('*', (_req, res, next) => {
+  if (_req.path.startsWith('/api') || _req.path.startsWith('/socket.io')) {
+    return next();
+  }
+  res.sendFile(path.join(clientDistPath, 'index.html'));
+});
 
 io.on('connection', (socket) => {
   logger.info(`Client connected: ${socket.id}`);

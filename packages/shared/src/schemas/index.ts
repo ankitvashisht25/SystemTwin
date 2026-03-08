@@ -1,3 +1,3 @@
-export * from './auth';
-export * from './architecture';
-export * from './simulation';
+export * from './auth.js';
+export * from './architecture.js';
+export * from './simulation.js';

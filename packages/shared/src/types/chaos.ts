@@ -1,5 +1,5 @@
-import type { FailureType } from './simulation';
-import type { ComponentType, NodeCategory } from './architecture';
+import type { FailureType } from './simulation.js';
+import type { ComponentType, NodeCategory } from './architecture.js';
 
 export interface ChaosScenario {
   id: string;

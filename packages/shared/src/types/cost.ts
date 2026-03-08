@@ -1,4 +1,4 @@
-import type { ComponentType } from './architecture';
+import type { ComponentType } from './architecture.js';
 
 export interface CostEstimate {
   nodeId: string;
