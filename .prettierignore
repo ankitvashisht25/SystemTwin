@@ -1,0 +1,7 @@
+dist
+node_modules
+.turbo
+data
+*.db
+*.db-wal
+*.db-shm
